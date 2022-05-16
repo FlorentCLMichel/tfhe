@@ -62,7 +62,7 @@ If you want to choose additional compile options (i.e. other installation folder
 ```
 mkdir build
 cd build
-cmake ../src -DENABLE_TESTS=on -DENABLE_FFTW=on -DCMAKE_BUILD_TYPE=debug
+cmake ../src -DENABLE_TESTS=on DENABLE_EXAMPLES=on -DENABLE_FFTW=on -DCMAKE_BUILD_TYPE=debug
 make
 ```
 The available options are the following:
