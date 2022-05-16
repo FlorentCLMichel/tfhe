@@ -1,3 +1,5 @@
+**Important note**: This is an *experimental* fork of the TFHE library, which I will use to run experiments. See the GitHub repository https://github.com/tfhe/tfhe for the official version, or the more recent implementation in Concrete (https://github.com/zama-ai/concrete).
+
 # TFHE
 Fast Fully Homomorphic Encryption Library over the Torus
 
