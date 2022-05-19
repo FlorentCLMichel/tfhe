@@ -7,28 +7,51 @@
 #include "tlwe.h"
 #include "tgsw.h"
 
+// A function computing the equality between two encrypted messages. 
+// 
+// Arguments: 
+//  * cipher1: pointer to an encryption of the first message m1
+//  * cipher2: pointer to an encryption of the second message m2
+//  * cipher3: pointer to a cipher which will encrypt the result 
+//             (encryption of `true` if m1 = m2 or `false` otherwise)
+//  * s1: length of m1
+//  * s2: length of m2
+//  * keyset: pointer to the bootstrapping key set
 void are_equal(LweSample* cipher1, LweSample* cipher2, LweSample* cipher3, 
                unsigned int s1, unsigned int s2, 
                TFheGateBootstrappingSecretKeySet *keyset) 
 {
-    // if the messages have different lengths, return an encryption of `false`
+    // If the messages have different lengths, we know that the messages are different. 
+    // `*cipher3` should thus be an encryption of `false`.
     if (s1 != s2) {
+
+        // For any boolean value b, XOR(b, b) is false. 
+        // The next line will thus set `*cipher3` to an encryption of `false`.
         bootsXOR(cipher3, cipher1, cipher1, &keyset->cloud);
+
+        // return, `*cipher3` already has the right result
         return;
     }
 
     // component-wise comparison
     for (unsigned int i=0; i<s1; i++)
+
+        // Set the element of index `i` of `*cipher3` to an encryption of `true` if the 
+        // corresponding elements of m1 and m2 are identical or `false` if they are different.
         bootsXNOR(cipher3+i, cipher1+i, cipher2+i, &keyset->cloud);
 
-    // accumulate
+    // accumulate: set the element of index 0 of `*cipher3` to an encryption of `false` if at least
+    // one of its element encrypts `false`
     for (unsigned int i=1; i<s1; i++)
         bootsAND(cipher3, cipher3+i, cipher3, &keyset->cloud);
+
+    // `*cipher3` now encrypts `true` if m1 = m2 or `false` otherwise
 }
+
 
 int main(void) {
 
-    // generate params 
+    // generate parameters
     int32_t minimum_lambda = 100;
     TFheGateBootstrappingParameterSet *params = new_default_gate_bootstrapping_parameters(minimum_lambda);
     const LweParams *in_out_params = params->in_out_params;
