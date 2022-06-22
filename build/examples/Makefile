@@ -111,15 +111,16 @@ install/fast: preinstall/fast
 	/usr/local/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : list_install_components/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -132,16 +133,15 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : edit_cache/fast
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -176,19 +176,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/equality-graphec.dir/rule:
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-graphec.dir/rule
-.PHONY : examples/CMakeFiles/equality-graphec.dir/rule
+examples/CMakeFiles/transforms-nayuki-portable.dir/rule:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-nayuki-portable.dir/rule
+.PHONY : examples/CMakeFiles/transforms-nayuki-portable.dir/rule
 
 # Convenience name for target.
-equality-graphec: examples/CMakeFiles/equality-graphec.dir/rule
+transforms-nayuki-portable: examples/CMakeFiles/transforms-nayuki-portable.dir/rule
 
-.PHONY : equality-graphec
+.PHONY : transforms-nayuki-portable
 
 # fast build rule for target.
-equality-graphec/fast:
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/build
-.PHONY : equality-graphec/fast
+transforms-nayuki-portable/fast:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-portable.dir/build.make examples/CMakeFiles/transforms-nayuki-portable.dir/build
+.PHONY : transforms-nayuki-portable/fast
 
 # Convenience name for target.
 examples/CMakeFiles/equality-spqlios-fma.dir/rule:
@@ -206,6 +206,21 @@ equality-spqlios-fma/fast:
 .PHONY : equality-spqlios-fma/fast
 
 # Convenience name for target.
+examples/CMakeFiles/equality-nayuki-avx.dir/rule:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-nayuki-avx.dir/rule
+.PHONY : examples/CMakeFiles/equality-nayuki-avx.dir/rule
+
+# Convenience name for target.
+equality-nayuki-avx: examples/CMakeFiles/equality-nayuki-avx.dir/rule
+
+.PHONY : equality-nayuki-avx
+
+# fast build rule for target.
+equality-nayuki-avx/fast:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-avx.dir/build.make examples/CMakeFiles/equality-nayuki-avx.dir/build
+.PHONY : equality-nayuki-avx/fast
+
+# Convenience name for target.
 examples/CMakeFiles/equality-spqlios-avx.dir/rule:
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-spqlios-avx.dir/rule
 .PHONY : examples/CMakeFiles/equality-spqlios-avx.dir/rule
@@ -221,19 +236,34 @@ equality-spqlios-avx/fast:
 .PHONY : equality-spqlios-avx/fast
 
 # Convenience name for target.
-examples/CMakeFiles/equality-nayuki-avx.dir/rule:
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-nayuki-avx.dir/rule
-.PHONY : examples/CMakeFiles/equality-nayuki-avx.dir/rule
+examples/CMakeFiles/transforms-nayuki-avx.dir/rule:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-nayuki-avx.dir/rule
+.PHONY : examples/CMakeFiles/transforms-nayuki-avx.dir/rule
 
 # Convenience name for target.
-equality-nayuki-avx: examples/CMakeFiles/equality-nayuki-avx.dir/rule
+transforms-nayuki-avx: examples/CMakeFiles/transforms-nayuki-avx.dir/rule
 
-.PHONY : equality-nayuki-avx
+.PHONY : transforms-nayuki-avx
 
 # fast build rule for target.
-equality-nayuki-avx/fast:
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-avx.dir/build.make examples/CMakeFiles/equality-nayuki-avx.dir/build
-.PHONY : equality-nayuki-avx/fast
+transforms-nayuki-avx/fast:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-avx.dir/build.make examples/CMakeFiles/transforms-nayuki-avx.dir/build
+.PHONY : transforms-nayuki-avx/fast
+
+# Convenience name for target.
+examples/CMakeFiles/transforms-spqlios-avx.dir/rule:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-spqlios-avx.dir/rule
+.PHONY : examples/CMakeFiles/transforms-spqlios-avx.dir/rule
+
+# Convenience name for target.
+transforms-spqlios-avx: examples/CMakeFiles/transforms-spqlios-avx.dir/rule
+
+.PHONY : transforms-spqlios-avx
+
+# fast build rule for target.
+transforms-spqlios-avx/fast:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-avx.dir/build.make examples/CMakeFiles/transforms-spqlios-avx.dir/build
+.PHONY : transforms-spqlios-avx/fast
 
 # Convenience name for target.
 examples/CMakeFiles/equality-nayuki-portable.dir/rule:
@@ -250,17 +280,62 @@ equality-nayuki-portable/fast:
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-portable.dir/build.make examples/CMakeFiles/equality-nayuki-portable.dir/build
 .PHONY : equality-nayuki-portable/fast
 
+# Convenience name for target.
+examples/CMakeFiles/equality-graphec.dir/rule:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-graphec.dir/rule
+.PHONY : examples/CMakeFiles/equality-graphec.dir/rule
+
+# Convenience name for target.
+equality-graphec: examples/CMakeFiles/equality-graphec.dir/rule
+
+.PHONY : equality-graphec
+
+# fast build rule for target.
+equality-graphec/fast:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/build
+.PHONY : equality-graphec/fast
+
+# Convenience name for target.
+examples/CMakeFiles/transforms-graphec.dir/rule:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-graphec.dir/rule
+.PHONY : examples/CMakeFiles/transforms-graphec.dir/rule
+
+# Convenience name for target.
+transforms-graphec: examples/CMakeFiles/transforms-graphec.dir/rule
+
+.PHONY : transforms-graphec
+
+# fast build rule for target.
+transforms-graphec/fast:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-graphec.dir/build.make examples/CMakeFiles/transforms-graphec.dir/build
+.PHONY : transforms-graphec/fast
+
+# Convenience name for target.
+examples/CMakeFiles/transforms-spqlios-fma.dir/rule:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-spqlios-fma.dir/rule
+.PHONY : examples/CMakeFiles/transforms-spqlios-fma.dir/rule
+
+# Convenience name for target.
+transforms-spqlios-fma: examples/CMakeFiles/transforms-spqlios-fma.dir/rule
+
+.PHONY : transforms-spqlios-fma
+
+# fast build rule for target.
+transforms-spqlios-fma/fast:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-fma.dir/build.make examples/CMakeFiles/transforms-spqlios-fma.dir/build
+.PHONY : transforms-spqlios-fma/fast
+
 equality.o: equality.cpp.o
 
 .PHONY : equality.o
 
 # target to build an object file
 equality.cpp.o:
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/equality.cpp.o
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-fma.dir/build.make examples/CMakeFiles/equality-spqlios-fma.dir/equality.cpp.o
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/equality.cpp.o
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-avx.dir/build.make examples/CMakeFiles/equality-nayuki-avx.dir/equality.cpp.o
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/equality.cpp.o
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-portable.dir/build.make examples/CMakeFiles/equality-nayuki-portable.dir/equality.cpp.o
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/equality.cpp.o
 .PHONY : equality.cpp.o
 
 equality.i: equality.cpp.i
@@ -269,11 +344,11 @@ equality.i: equality.cpp.i
 
 # target to preprocess a source file
 equality.cpp.i:
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/equality.cpp.i
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-fma.dir/build.make examples/CMakeFiles/equality-spqlios-fma.dir/equality.cpp.i
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/equality.cpp.i
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-avx.dir/build.make examples/CMakeFiles/equality-nayuki-avx.dir/equality.cpp.i
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/equality.cpp.i
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-portable.dir/build.make examples/CMakeFiles/equality-nayuki-portable.dir/equality.cpp.i
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/equality.cpp.i
 .PHONY : equality.cpp.i
 
 equality.s: equality.cpp.s
@@ -282,12 +357,51 @@ equality.s: equality.cpp.s
 
 # target to generate assembly for a file
 equality.cpp.s:
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/equality.cpp.s
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-fma.dir/build.make examples/CMakeFiles/equality-spqlios-fma.dir/equality.cpp.s
-	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/equality.cpp.s
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-avx.dir/build.make examples/CMakeFiles/equality-nayuki-avx.dir/equality.cpp.s
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/equality.cpp.s
 	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-portable.dir/build.make examples/CMakeFiles/equality-nayuki-portable.dir/equality.cpp.s
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/equality.cpp.s
 .PHONY : equality.cpp.s
+
+transforms.o: transforms.cpp.o
+
+.PHONY : transforms.o
+
+# target to build an object file
+transforms.cpp.o:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-portable.dir/build.make examples/CMakeFiles/transforms-nayuki-portable.dir/transforms.cpp.o
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-avx.dir/build.make examples/CMakeFiles/transforms-nayuki-avx.dir/transforms.cpp.o
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-avx.dir/build.make examples/CMakeFiles/transforms-spqlios-avx.dir/transforms.cpp.o
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-graphec.dir/build.make examples/CMakeFiles/transforms-graphec.dir/transforms.cpp.o
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-fma.dir/build.make examples/CMakeFiles/transforms-spqlios-fma.dir/transforms.cpp.o
+.PHONY : transforms.cpp.o
+
+transforms.i: transforms.cpp.i
+
+.PHONY : transforms.i
+
+# target to preprocess a source file
+transforms.cpp.i:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-portable.dir/build.make examples/CMakeFiles/transforms-nayuki-portable.dir/transforms.cpp.i
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-avx.dir/build.make examples/CMakeFiles/transforms-nayuki-avx.dir/transforms.cpp.i
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-avx.dir/build.make examples/CMakeFiles/transforms-spqlios-avx.dir/transforms.cpp.i
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-graphec.dir/build.make examples/CMakeFiles/transforms-graphec.dir/transforms.cpp.i
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-fma.dir/build.make examples/CMakeFiles/transforms-spqlios-fma.dir/transforms.cpp.i
+.PHONY : transforms.cpp.i
+
+transforms.s: transforms.cpp.s
+
+.PHONY : transforms.s
+
+# target to generate assembly for a file
+transforms.cpp.s:
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-portable.dir/build.make examples/CMakeFiles/transforms-nayuki-portable.dir/transforms.cpp.s
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-avx.dir/build.make examples/CMakeFiles/transforms-nayuki-avx.dir/transforms.cpp.s
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-avx.dir/build.make examples/CMakeFiles/transforms-spqlios-avx.dir/transforms.cpp.s
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-graphec.dir/build.make examples/CMakeFiles/transforms-graphec.dir/transforms.cpp.s
+	cd /home/florent/openfhe_opt/tfhe/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-fma.dir/build.make examples/CMakeFiles/transforms-spqlios-fma.dir/transforms.cpp.s
+.PHONY : transforms.cpp.s
 
 # Help Target
 help:
@@ -306,9 +420,17 @@ help:
 	@echo "... equality-nayuki-portable"
 	@echo "... equality-spqlios-avx"
 	@echo "... equality-spqlios-fma"
+	@echo "... transforms-graphec"
+	@echo "... transforms-nayuki-avx"
+	@echo "... transforms-nayuki-portable"
+	@echo "... transforms-spqlios-avx"
+	@echo "... transforms-spqlios-fma"
 	@echo "... equality.o"
 	@echo "... equality.i"
 	@echo "... equality.s"
+	@echo "... transforms.o"
+	@echo "... transforms.i"
+	@echo "... transforms.s"
 .PHONY : help
 
 

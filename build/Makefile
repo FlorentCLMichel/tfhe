@@ -319,17 +319,17 @@ tfhe-fft-graphec/fast:
 .PHONY : tfhe-fft-graphec/fast
 
 #=============================================================================
-# Target rules for targets named equality-graphec
+# Target rules for targets named transforms-nayuki-portable
 
 # Build rule for target.
-equality-graphec: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 equality-graphec
-.PHONY : equality-graphec
+transforms-nayuki-portable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 transforms-nayuki-portable
+.PHONY : transforms-nayuki-portable
 
 # fast build rule for target.
-equality-graphec/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/build
-.PHONY : equality-graphec/fast
+transforms-nayuki-portable/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-portable.dir/build.make examples/CMakeFiles/transforms-nayuki-portable.dir/build
+.PHONY : transforms-nayuki-portable/fast
 
 #=============================================================================
 # Target rules for targets named equality-spqlios-fma
@@ -345,19 +345,6 @@ equality-spqlios-fma/fast:
 .PHONY : equality-spqlios-fma/fast
 
 #=============================================================================
-# Target rules for targets named equality-spqlios-avx
-
-# Build rule for target.
-equality-spqlios-avx: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 equality-spqlios-avx
-.PHONY : equality-spqlios-avx
-
-# fast build rule for target.
-equality-spqlios-avx/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/build
-.PHONY : equality-spqlios-avx/fast
-
-#=============================================================================
 # Target rules for targets named equality-nayuki-avx
 
 # Build rule for target.
@@ -371,6 +358,45 @@ equality-nayuki-avx/fast:
 .PHONY : equality-nayuki-avx/fast
 
 #=============================================================================
+# Target rules for targets named equality-spqlios-avx
+
+# Build rule for target.
+equality-spqlios-avx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 equality-spqlios-avx
+.PHONY : equality-spqlios-avx
+
+# fast build rule for target.
+equality-spqlios-avx/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/build
+.PHONY : equality-spqlios-avx/fast
+
+#=============================================================================
+# Target rules for targets named transforms-nayuki-avx
+
+# Build rule for target.
+transforms-nayuki-avx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 transforms-nayuki-avx
+.PHONY : transforms-nayuki-avx
+
+# fast build rule for target.
+transforms-nayuki-avx/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-avx.dir/build.make examples/CMakeFiles/transforms-nayuki-avx.dir/build
+.PHONY : transforms-nayuki-avx/fast
+
+#=============================================================================
+# Target rules for targets named transforms-spqlios-avx
+
+# Build rule for target.
+transforms-spqlios-avx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 transforms-spqlios-avx
+.PHONY : transforms-spqlios-avx
+
+# fast build rule for target.
+transforms-spqlios-avx/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-avx.dir/build.make examples/CMakeFiles/transforms-spqlios-avx.dir/build
+.PHONY : transforms-spqlios-avx/fast
+
+#=============================================================================
 # Target rules for targets named equality-nayuki-portable
 
 # Build rule for target.
@@ -382,6 +408,45 @@ equality-nayuki-portable: cmake_check_build_system
 equality-nayuki-portable/fast:
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-portable.dir/build.make examples/CMakeFiles/equality-nayuki-portable.dir/build
 .PHONY : equality-nayuki-portable/fast
+
+#=============================================================================
+# Target rules for targets named equality-graphec
+
+# Build rule for target.
+equality-graphec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 equality-graphec
+.PHONY : equality-graphec
+
+# fast build rule for target.
+equality-graphec/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/build
+.PHONY : equality-graphec/fast
+
+#=============================================================================
+# Target rules for targets named transforms-graphec
+
+# Build rule for target.
+transforms-graphec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 transforms-graphec
+.PHONY : transforms-graphec
+
+# fast build rule for target.
+transforms-graphec/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-graphec.dir/build.make examples/CMakeFiles/transforms-graphec.dir/build
+.PHONY : transforms-graphec/fast
+
+#=============================================================================
+# Target rules for targets named transforms-spqlios-fma
+
+# Build rule for target.
+transforms-spqlios-fma: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 transforms-spqlios-fma
+.PHONY : transforms-spqlios-fma
+
+# fast build rule for target.
+transforms-spqlios-fma/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-fma.dir/build.make examples/CMakeFiles/transforms-spqlios-fma.dir/build
+.PHONY : transforms-spqlios-fma/fast
 
 # Help Target
 help:
@@ -411,6 +476,11 @@ help:
 	@echo "... tfhe-nayuki-portable"
 	@echo "... tfhe-spqlios-avx"
 	@echo "... tfhe-spqlios-fma"
+	@echo "... transforms-graphec"
+	@echo "... transforms-nayuki-avx"
+	@echo "... transforms-nayuki-portable"
+	@echo "... transforms-spqlios-avx"
+	@echo "... transforms-spqlios-fma"
 .PHONY : help
 
 

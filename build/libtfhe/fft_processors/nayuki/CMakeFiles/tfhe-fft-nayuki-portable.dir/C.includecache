@@ -6,25 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/nayuki/fft-model-of-x8664-avx.c
-stdint.h
--
-stdlib.h
--
-fft.h
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/nayuki/fft.h
-
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/nayuki/fft-x8664-avx-aux.c
-math.h
--
-stdint.h
--
-stdlib.h
--
-string.h
--
-fft.h
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/nayuki/fft.h
-
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/nayuki/fft.h
-

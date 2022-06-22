@@ -152,12 +152,6 @@ cassert
 cmath
 -
 
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/nayuki/lagrangehalfc_impl.cpp
-polynomials.h
--
-lagrangehalfc_impl.h
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/nayuki/lagrangehalfc_impl.h
-
 /home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/nayuki/lagrangehalfc_impl.h
 cassert
 -

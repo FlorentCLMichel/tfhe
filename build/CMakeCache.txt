@@ -285,6 +285,12 @@ ENABLE_SPQLIOS_FMA:BOOL=ON
 //Build the tests (requires googletest)
 ENABLE_TESTS:BOOL=OFF
 
+//Value Computed by CMake
+Project_BINARY_DIR:STATIC=/home/florent/openfhe_opt/tfhe/build
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=/home/florent/openfhe_opt/tfhe/src
+
 //Dependencies for the target
 tfhe-graphec_LIB_DEPENDS:STATIC=general;/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/optalysys_graphec/libproto_graphec.a;
 

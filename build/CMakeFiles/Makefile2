@@ -93,11 +93,16 @@ clean: examples/clean
 # Directory level rules for directory examples
 
 # Recursive "all" directory target.
-examples/all: examples/CMakeFiles/equality-graphec.dir/all
+examples/all: examples/CMakeFiles/transforms-nayuki-portable.dir/all
 examples/all: examples/CMakeFiles/equality-spqlios-fma.dir/all
-examples/all: examples/CMakeFiles/equality-spqlios-avx.dir/all
 examples/all: examples/CMakeFiles/equality-nayuki-avx.dir/all
+examples/all: examples/CMakeFiles/equality-spqlios-avx.dir/all
+examples/all: examples/CMakeFiles/transforms-nayuki-avx.dir/all
+examples/all: examples/CMakeFiles/transforms-spqlios-avx.dir/all
 examples/all: examples/CMakeFiles/equality-nayuki-portable.dir/all
+examples/all: examples/CMakeFiles/equality-graphec.dir/all
+examples/all: examples/CMakeFiles/transforms-graphec.dir/all
+examples/all: examples/CMakeFiles/transforms-spqlios-fma.dir/all
 
 .PHONY : examples/all
 
@@ -107,11 +112,16 @@ examples/preinstall:
 .PHONY : examples/preinstall
 
 # Recursive "clean" directory target.
-examples/clean: examples/CMakeFiles/equality-graphec.dir/clean
+examples/clean: examples/CMakeFiles/transforms-nayuki-portable.dir/clean
 examples/clean: examples/CMakeFiles/equality-spqlios-fma.dir/clean
-examples/clean: examples/CMakeFiles/equality-spqlios-avx.dir/clean
 examples/clean: examples/CMakeFiles/equality-nayuki-avx.dir/clean
+examples/clean: examples/CMakeFiles/equality-spqlios-avx.dir/clean
+examples/clean: examples/CMakeFiles/transforms-nayuki-avx.dir/clean
+examples/clean: examples/CMakeFiles/transforms-spqlios-avx.dir/clean
 examples/clean: examples/CMakeFiles/equality-nayuki-portable.dir/clean
+examples/clean: examples/CMakeFiles/equality-graphec.dir/clean
+examples/clean: examples/CMakeFiles/transforms-graphec.dir/clean
+examples/clean: examples/CMakeFiles/transforms-spqlios-fma.dir/clean
 
 .PHONY : examples/clean
 
@@ -530,31 +540,31 @@ libtfhe/fft_processors/optalysys_graphec/CMakeFiles/tfhe-fft-graphec.dir/clean:
 .PHONY : libtfhe/fft_processors/optalysys_graphec/CMakeFiles/tfhe-fft-graphec.dir/clean
 
 #=============================================================================
-# Target rules for target examples/CMakeFiles/equality-graphec.dir
+# Target rules for target examples/CMakeFiles/transforms-nayuki-portable.dir
 
 # All Build rule for target.
-examples/CMakeFiles/equality-graphec.dir/all: libtfhe/CMakeFiles/tfhe-graphec.dir/all
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/depend
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=1,2 "Built target equality-graphec"
-.PHONY : examples/CMakeFiles/equality-graphec.dir/all
+examples/CMakeFiles/transforms-nayuki-portable.dir/all: libtfhe/CMakeFiles/tfhe-nayuki-portable.dir/all
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-portable.dir/build.make examples/CMakeFiles/transforms-nayuki-portable.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-portable.dir/build.make examples/CMakeFiles/transforms-nayuki-portable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=70,71 "Built target transforms-nayuki-portable"
+.PHONY : examples/CMakeFiles/transforms-nayuki-portable.dir/all
 
 # Build rule for subdir invocation for target.
-examples/CMakeFiles/equality-graphec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 32
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-graphec.dir/all
+examples/CMakeFiles/transforms-nayuki-portable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 34
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-nayuki-portable.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 0
-.PHONY : examples/CMakeFiles/equality-graphec.dir/rule
+.PHONY : examples/CMakeFiles/transforms-nayuki-portable.dir/rule
 
 # Convenience name for target.
-equality-graphec: examples/CMakeFiles/equality-graphec.dir/rule
+transforms-nayuki-portable: examples/CMakeFiles/transforms-nayuki-portable.dir/rule
 
-.PHONY : equality-graphec
+.PHONY : transforms-nayuki-portable
 
 # clean rule for target.
-examples/CMakeFiles/equality-graphec.dir/clean:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/clean
-.PHONY : examples/CMakeFiles/equality-graphec.dir/clean
+examples/CMakeFiles/transforms-nayuki-portable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-portable.dir/build.make examples/CMakeFiles/transforms-nayuki-portable.dir/clean
+.PHONY : examples/CMakeFiles/transforms-nayuki-portable.dir/clean
 
 #=============================================================================
 # Target rules for target examples/CMakeFiles/equality-spqlios-fma.dir
@@ -584,33 +594,6 @@ examples/CMakeFiles/equality-spqlios-fma.dir/clean:
 .PHONY : examples/CMakeFiles/equality-spqlios-fma.dir/clean
 
 #=============================================================================
-# Target rules for target examples/CMakeFiles/equality-spqlios-avx.dir
-
-# All Build rule for target.
-examples/CMakeFiles/equality-spqlios-avx.dir/all: libtfhe/CMakeFiles/tfhe-spqlios-avx.dir/all
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/depend
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=7,8 "Built target equality-spqlios-avx"
-.PHONY : examples/CMakeFiles/equality-spqlios-avx.dir/all
-
-# Build rule for subdir invocation for target.
-examples/CMakeFiles/equality-spqlios-avx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 36
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-spqlios-avx.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 0
-.PHONY : examples/CMakeFiles/equality-spqlios-avx.dir/rule
-
-# Convenience name for target.
-equality-spqlios-avx: examples/CMakeFiles/equality-spqlios-avx.dir/rule
-
-.PHONY : equality-spqlios-avx
-
-# clean rule for target.
-examples/CMakeFiles/equality-spqlios-avx.dir/clean:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/clean
-.PHONY : examples/CMakeFiles/equality-spqlios-avx.dir/clean
-
-#=============================================================================
 # Target rules for target examples/CMakeFiles/equality-nayuki-avx.dir
 
 # All Build rule for target.
@@ -638,6 +621,87 @@ examples/CMakeFiles/equality-nayuki-avx.dir/clean:
 .PHONY : examples/CMakeFiles/equality-nayuki-avx.dir/clean
 
 #=============================================================================
+# Target rules for target examples/CMakeFiles/equality-spqlios-avx.dir
+
+# All Build rule for target.
+examples/CMakeFiles/equality-spqlios-avx.dir/all: libtfhe/CMakeFiles/tfhe-spqlios-avx.dir/all
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=7,8 "Built target equality-spqlios-avx"
+.PHONY : examples/CMakeFiles/equality-spqlios-avx.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/equality-spqlios-avx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 36
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-spqlios-avx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/equality-spqlios-avx.dir/rule
+
+# Convenience name for target.
+equality-spqlios-avx: examples/CMakeFiles/equality-spqlios-avx.dir/rule
+
+.PHONY : equality-spqlios-avx
+
+# clean rule for target.
+examples/CMakeFiles/equality-spqlios-avx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-spqlios-avx.dir/build.make examples/CMakeFiles/equality-spqlios-avx.dir/clean
+.PHONY : examples/CMakeFiles/equality-spqlios-avx.dir/clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/transforms-nayuki-avx.dir
+
+# All Build rule for target.
+examples/CMakeFiles/transforms-nayuki-avx.dir/all: libtfhe/CMakeFiles/tfhe-nayuki-avx.dir/all
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-avx.dir/build.make examples/CMakeFiles/transforms-nayuki-avx.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-avx.dir/build.make examples/CMakeFiles/transforms-nayuki-avx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=68,69 "Built target transforms-nayuki-avx"
+.PHONY : examples/CMakeFiles/transforms-nayuki-avx.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/transforms-nayuki-avx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 35
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-nayuki-avx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/transforms-nayuki-avx.dir/rule
+
+# Convenience name for target.
+transforms-nayuki-avx: examples/CMakeFiles/transforms-nayuki-avx.dir/rule
+
+.PHONY : transforms-nayuki-avx
+
+# clean rule for target.
+examples/CMakeFiles/transforms-nayuki-avx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-nayuki-avx.dir/build.make examples/CMakeFiles/transforms-nayuki-avx.dir/clean
+.PHONY : examples/CMakeFiles/transforms-nayuki-avx.dir/clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/transforms-spqlios-avx.dir
+
+# All Build rule for target.
+examples/CMakeFiles/transforms-spqlios-avx.dir/all: libtfhe/CMakeFiles/tfhe-spqlios-avx.dir/all
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-avx.dir/build.make examples/CMakeFiles/transforms-spqlios-avx.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-avx.dir/build.make examples/CMakeFiles/transforms-spqlios-avx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=72,73 "Built target transforms-spqlios-avx"
+.PHONY : examples/CMakeFiles/transforms-spqlios-avx.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/transforms-spqlios-avx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 36
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-spqlios-avx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/transforms-spqlios-avx.dir/rule
+
+# Convenience name for target.
+transforms-spqlios-avx: examples/CMakeFiles/transforms-spqlios-avx.dir/rule
+
+.PHONY : transforms-spqlios-avx
+
+# clean rule for target.
+examples/CMakeFiles/transforms-spqlios-avx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-avx.dir/build.make examples/CMakeFiles/transforms-spqlios-avx.dir/clean
+.PHONY : examples/CMakeFiles/transforms-spqlios-avx.dir/clean
+
+#=============================================================================
 # Target rules for target examples/CMakeFiles/equality-nayuki-portable.dir
 
 # All Build rule for target.
@@ -663,6 +727,87 @@ equality-nayuki-portable: examples/CMakeFiles/equality-nayuki-portable.dir/rule
 examples/CMakeFiles/equality-nayuki-portable.dir/clean:
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-nayuki-portable.dir/build.make examples/CMakeFiles/equality-nayuki-portable.dir/clean
 .PHONY : examples/CMakeFiles/equality-nayuki-portable.dir/clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/equality-graphec.dir
+
+# All Build rule for target.
+examples/CMakeFiles/equality-graphec.dir/all: libtfhe/CMakeFiles/tfhe-graphec.dir/all
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=1,2 "Built target equality-graphec"
+.PHONY : examples/CMakeFiles/equality-graphec.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/equality-graphec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/equality-graphec.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/equality-graphec.dir/rule
+
+# Convenience name for target.
+equality-graphec: examples/CMakeFiles/equality-graphec.dir/rule
+
+.PHONY : equality-graphec
+
+# clean rule for target.
+examples/CMakeFiles/equality-graphec.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/equality-graphec.dir/build.make examples/CMakeFiles/equality-graphec.dir/clean
+.PHONY : examples/CMakeFiles/equality-graphec.dir/clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/transforms-graphec.dir
+
+# All Build rule for target.
+examples/CMakeFiles/transforms-graphec.dir/all: libtfhe/CMakeFiles/tfhe-graphec.dir/all
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-graphec.dir/build.make examples/CMakeFiles/transforms-graphec.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-graphec.dir/build.make examples/CMakeFiles/transforms-graphec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=66,67 "Built target transforms-graphec"
+.PHONY : examples/CMakeFiles/transforms-graphec.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/transforms-graphec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-graphec.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/transforms-graphec.dir/rule
+
+# Convenience name for target.
+transforms-graphec: examples/CMakeFiles/transforms-graphec.dir/rule
+
+.PHONY : transforms-graphec
+
+# clean rule for target.
+examples/CMakeFiles/transforms-graphec.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-graphec.dir/build.make examples/CMakeFiles/transforms-graphec.dir/clean
+.PHONY : examples/CMakeFiles/transforms-graphec.dir/clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/transforms-spqlios-fma.dir
+
+# All Build rule for target.
+examples/CMakeFiles/transforms-spqlios-fma.dir/all: libtfhe/CMakeFiles/tfhe-spqlios-fma.dir/all
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-fma.dir/build.make examples/CMakeFiles/transforms-spqlios-fma.dir/depend
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-fma.dir/build.make examples/CMakeFiles/transforms-spqlios-fma.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/florent/openfhe_opt/tfhe/build/CMakeFiles --progress-num=74,75 "Built target transforms-spqlios-fma"
+.PHONY : examples/CMakeFiles/transforms-spqlios-fma.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/transforms-spqlios-fma.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 36
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/transforms-spqlios-fma.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/florent/openfhe_opt/tfhe/build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/transforms-spqlios-fma.dir/rule
+
+# Convenience name for target.
+transforms-spqlios-fma: examples/CMakeFiles/transforms-spqlios-fma.dir/rule
+
+.PHONY : transforms-spqlios-fma
+
+# clean rule for target.
+examples/CMakeFiles/transforms-spqlios-fma.dir/clean:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/transforms-spqlios-fma.dir/build.make examples/CMakeFiles/transforms-spqlios-fma.dir/clean
+.PHONY : examples/CMakeFiles/transforms-spqlios-fma.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
