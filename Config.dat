@@ -1,0 +1,4 @@
+4       # OFT output bit depth
+4       # OFT size
+0.5e-10 # frame duration (s)
+2       # power draw (W)

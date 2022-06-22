@@ -4,7 +4,7 @@ FFT_Processor_graphec::FFT_Processor_graphec(const int32_t N): _2N(2*N), N(N), N
     omegaxminus1 = new cplx[_2N];
     in = new cplx[_2N];
     out = new cplx[_2N];
-    index_simulator = define(ACCURACY, _2N);
+    index_simulator = define(ACCURACY, N);
     for (int32_t x=0; x<_2N; x++) {
 	    omegaxminus1[x]=cplx(cos(x*M_PI/N)-1.,-sin(x*M_PI/N)); 
     }

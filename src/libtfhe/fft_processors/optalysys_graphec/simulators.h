@@ -8,7 +8,7 @@
 // Complex numbers are represented by doublets of 64-bits floating-point 
 // numbers, with the real part followed by the imaginary part.
 //
-// the first argument of all functions that take at least one is the index of 
+// The first argument of all functions that take at least one is the index of 
 // the simulator.
 //_____________________________________________________________________________
 

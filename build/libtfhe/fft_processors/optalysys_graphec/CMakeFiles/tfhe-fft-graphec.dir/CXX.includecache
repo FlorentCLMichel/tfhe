@@ -140,10 +140,6 @@ tlwe.h
 lagrangehalfc_impl.h
 /home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/optalysys_graphec/lagrangehalfc_impl.h
 
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/optalysys_graphec/lagrangehalfc_impl.cpp
-lagrangehalfc_impl.h
-/home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/optalysys_graphec/lagrangehalfc_impl.h
-
 /home/florent/openfhe_opt/tfhe/src/libtfhe/fft_processors/optalysys_graphec/lagrangehalfc_impl.h
 cassert
 -
