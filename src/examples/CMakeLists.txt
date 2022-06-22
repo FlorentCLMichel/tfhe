@@ -3,6 +3,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 set(CPP_EXAMPLES
         equality
+        transforms
         )
 
 foreach (FFT_PROCESSOR IN LISTS FFT_PROCESSORS)
