@@ -29,12 +29,12 @@ void FFT_Processor_graphec::execute_reverse_torus32(cplx* res, const Torus32* a)
 }
 
 void FFT_Processor_graphec::execute_direct_Torus32(Torus32* res, const cplx* a) {
-    static const double _2p32 = double(INT64_C(1)<<33);
+    static const double _2p33 = double(INT64_C(1)<<33);
     static const double _1sN = double(1)/double(N);
     for (int32_t i=0; i<_2N; i++) in[i]=0;
     for (int32_t i=0; i<Ns2; i++) in[2*i+1]=a[i];
     ft_inplace_stable(index_simulator, (double*) in, (double*) out);
-    for (int32_t i=0; i<N; i++) res[i]=Torus32(int64_t(out[i].real()*_1sN*_2p32));
+    for (int32_t i=0; i<N; i++) res[i]=Torus32(int64_t(out[i].real()*_1sN*_2p33));
     for (int32_t i=0; i<N; i++) assert(fabs(out[N+i]+out[i])<1e-20);
 }
 
