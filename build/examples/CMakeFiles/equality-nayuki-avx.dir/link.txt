@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=gnu++11 -g3 -march=native -O2 -DNDEBUG -funroll-loops -Wall -Werror -rdynamic CMakeFiles/equality-nayuki-avx.dir/equality.cpp.o -o equality-nayuki-avx  -Wl,-rpath,/home/florent/openfhe_opt/tfhe/build/libtfhe ../libtfhe/libtfhe-nayuki-avx.so 

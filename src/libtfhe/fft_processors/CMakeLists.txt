@@ -12,3 +12,6 @@ if (ENABLE_SPQLIOS_AVX OR ENABLE_SPQLIOS_FMA)
     add_subdirectory(spqlios)
 endif (ENABLE_SPQLIOS_AVX OR ENABLE_SPQLIOS_FMA) 
 
+if (ENABLE_GRAPHEC) 
+    add_subdirectory(optalysys_graphec)
+endif (ENABLE_GRAPHEC) 

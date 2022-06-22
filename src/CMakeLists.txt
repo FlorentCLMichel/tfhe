@@ -10,6 +10,7 @@ set(ENABLE_NAYUKI_PORTABLE ON CACHE BOOL "Enable the Nayuki portable FFT process
 set(ENABLE_NAYUKI_AVX ON CACHE BOOL "Enable the Nayuki AVX assembly FFT processor (MIT)")
 set(ENABLE_SPQLIOS_AVX ON CACHE BOOL "Enable the SPQLIOS AVX assembly FFT processor")
 set(ENABLE_SPQLIOS_FMA ON CACHE BOOL "Enable the SPQLIOS FMA assembly FFT processor")
+set(ENABLE_GRAPHEC OFF CACHE BOOL "Enable the Optalysys GraphEC FFT processor")
 set(ENABLE_TESTS OFF CACHE BOOL "Build the tests (requires googletest)")
 
 project(tfhe)
@@ -63,6 +64,10 @@ endif(ENABLE_SPQLIOS_AVX)
 if (ENABLE_SPQLIOS_FMA)
 list(APPEND FFT_PROCESSORS "spqlios-fma")
 endif(ENABLE_SPQLIOS_FMA)
+
+if (ENABLE_GRAPHEC)
+list(APPEND FFT_PROCESSORS "graphec")
+endif(ENABLE_GRAPHEC)
 
 include_directories("include")
 file(GLOB TFHE_HEADERS include/*.h)

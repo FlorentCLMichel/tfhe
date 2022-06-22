@@ -46,6 +46,10 @@ foreach (FFT_PROCESSOR IN LISTS FFT_PROCESSORS)
     if (FFT_PROCESSOR STREQUAL "fftw")
         target_link_libraries(tfhe-fftw ${FFTW_LIBRARIES})
     endif (FFT_PROCESSOR STREQUAL "fftw")
+    
+    if (FFT_PROCESSOR STREQUAL "graphec")
+        target_link_libraries(tfhe-graphec "${CMAKE_CURRENT_SOURCE_DIR}/fft_processors/optalysys_graphec/libproto_graphec.a")
+    endif (FFT_PROCESSOR STREQUAL "graphec")
 
     install(TARGETS tfhe-${FFT_PROCESSOR}
         RUNTIME DESTINATION bin
